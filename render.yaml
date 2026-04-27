@@ -1,0 +1,32 @@
+services:
+  - type: background
+    name: polymarket-copybot
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python src/bot.py"
+    envVars:
+      - key: TARGET_ADDRESSES
+        value: "0x6e1d5040d0ac73709b0621f620d2a60b80d2d0fa"
+      - key: BUDGET_USD
+        value: "5"
+      - key: DRY_RUN
+        value: "false"
+      - key: POLL_INTERVAL
+        value: "1"
+      - key: TELEGRAM_ENABLED
+        value: "true"
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
+      - key: PRIVATE_KEY
+        sync: false
+      - key: FUNDS_CONTRACT_ADDRESS
+        sync: false
+      - key: API_KEY
+        sync: false
+      - key: API_SECRET
+        sync: false
+      - key: API_PASSPHRASE
+        sync: false
