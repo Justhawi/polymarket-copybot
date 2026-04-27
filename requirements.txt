@@ -1,5 +1,3 @@
 aiohttp>=3.9.0
 python-dotenv>=1.0.0
-
-# Uncomment to enable live trading (requires Polymarket account + private key)
-# py-clob-client-v2
+py-clob-client-v2
