@@ -16,13 +16,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# ─── Check dependencies ───────────────────────────────────────────────────────
-try:
-    from py_clob_client.client import ClobClient
-    logger.info("py-clob-client-v2 installed: OK")
-except ImportError as e:
-    logger.error("py-clob-client-v2 import failed: %s", e)
-
 # ─── Logging ────────────────────────────────────────────────────────────────
 os.makedirs("logs", exist_ok=True)
 logging.basicConfig(
@@ -207,8 +200,8 @@ async def place_copy_order(session: aiohttp.ClientSession, trade: dict, our_size
         logger.info("Order posted: %s", resp)
         return True
 
-    except ImportError as ie:
-        logger.error("py-clob-client-v2 not installed. Run: pip install py-clob-client-v2. ImportError: %s", ie)
+    except ImportError:
+        logger.error("py-clob-client-v2 not installed. Run: pip install py-clob-client-v2")
         return False
     except Exception as e:
         logger.error("Order placement failed: %s", e)
