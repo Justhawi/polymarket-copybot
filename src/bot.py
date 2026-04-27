@@ -86,24 +86,25 @@ async def send_telegram_message(message: str) -> bool:
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
     payload = {"chat_id": TELEGRAM_CHAT_ID, "text": message, "parse_mode": "HTML"}
     
-    for attempt in range(3):
+    for attempt in range(5):
         try:
             async with aiohttp.ClientSession() as session:
                 async with session.post(url, json=payload, timeout=aiohttp.ClientTimeout(total=10)) as resp:
                     if resp.status == 200:
-                        logger.info(f"Telegram sent successfully")
+                        logger.info("Telegram signal sent!")
                         return True
                     elif resp.status == 429:
                         wait_time = 2 ** attempt
-                        logger.warning(f"Telegram rate limited, waiting {wait_time}s...")
+                        logger.warning(f"Telegram rate limited, retrying in {wait_time}s...")
                         await asyncio.sleep(wait_time)
                         continue
                     else:
                         logger.warning(f"Telegram response: {resp.status}")
                         return False
         except Exception as e:
-            logger.error("Telegram send error: %s", e)
+            logger.error("Telegram error: %s", e)
             await asyncio.sleep(1)
+    logger.warning("Telegram failed after 5 attempts")
     return False
 
 

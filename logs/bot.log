@@ -5870,3 +5870,63 @@
 2026-04-27 03:11:46,420 [INFO] HTTP Request: GET https://clob.polymarket.com/fee-rate?token_id=21085826861814719925593528929889585964749364155149549755010739021657875110604 "HTTP/2 200 OK"
 2026-04-27 03:11:46,624 [INFO] HTTP Request: POST https://clob.polymarket.com/order "HTTP/2 400 Bad Request"
 2026-04-27 03:11:46,626 [ERROR] Order placement failed: PolyApiException[status_code=400, error_message={'error': 'not enough balance / allowance: the balance is not enough -> balance: 1376660, order amount: 2700000'}]
+2026-04-27 08:08:01,597 [INFO] ============================================================
+2026-04-27 08:08:01,598 [INFO] Polymarket Copy Bot starting up
+2026-04-27 08:08:01,598 [INFO]   Targets : 0x6e1d...d0fa, 0x161e...6ef0
+2026-04-27 08:08:01,599 [INFO]   Total Budget: $20 (split across 2 traders)
+2026-04-27 08:08:01,599 [INFO]   Per Trader: $10
+2026-04-27 08:08:01,599 [INFO]   Poll    : every 1s
+2026-04-27 08:08:01,599 [INFO]   DRY RUN : False
+2026-04-27 08:08:01,599 [INFO]   Open Positions: 2
+2026-04-27 08:08:01,599 [INFO] ============================================================
+2026-04-27 08:08:01,599 [INFO] Fetching existing trades to avoid replaying history...
+2026-04-27 08:08:02,310 [INFO]   Seeded 40 known trade IDs.
+2026-04-27 08:08:02,934 [WARNING] Telegram rate limited, waiting 1s...
+2026-04-27 08:08:04,474 [WARNING] Telegram rate limited, waiting 2s...
+2026-04-27 08:08:07,078 [WARNING] Telegram rate limited, waiting 4s...
+2026-04-27 08:08:26,577 [INFO] [0x6e1d...d0fa] New trade detected!
+   Trade ID   : {'proxyWallet': '0x6e1d5040d0ac73709b0621f620d2a60b80d2d0fa', 'timestamp': 1777266492, 'conditionId': '0xcb36edd3bc49c82abdc5a203097cba23b59de1b8d5079caa12d5bb9db073d5d8', 'type': 'TRADE', 'size': 111.11111, 'usdcSize': 107.111111, 'transactionHash': '0x1ed1e65f6a5237c31b55b3269667467d09cab8ce5eacbcb0dcc7086fcab1bd70', 'price': 0.9640000086400001, 'asset': '2754093488157750620514999727246832823809160371045150353713006032729772569239', 'side': 'BUY', 'outcomeIndex': 0, 'title': 'Will the price of Bitcoin be above $72,000 on May 2?', 'slug': 'bitcoin-above-72k-on-may-2', 'icon': 'https://polymarket-upload.s3.us-east-2.amazonaws.com/BTC+fullsize.png', 'eventSlug': 'bitcoin-above-on-may-2', 'outcome': 'Yes', 'name': '0x6E1d5040d0ac73709B0621F620d2a60b80d2D0F', 'pseudonym': 'Respectful-Clan', 'bio': '', 'profileImage': '', 'profileImageOptimized': '', 'source_wallet': '0x6e1d5040d0ac73709b0621f620d2a60b80d2d0fa'}
+   Market     : None
+   Side      : BUY
+   Outcome   : Yes
+   Price     : $0.9640
+   Target    : $107.11
+   Our Size  : $10.00 (budget $10)
+
+2026-04-27 08:08:27,036 [WARNING] Telegram rate limited, waiting 1s...
+2026-04-27 08:08:28,522 [WARNING] Telegram rate limited, waiting 2s...
+2026-04-27 08:08:30,989 [WARNING] Telegram rate limited, waiting 4s...
+2026-04-27 08:08:37,066 [INFO] HTTP Request: GET https://clob.polymarket.com/tick-size?token_id=2754093488157750620514999727246832823809160371045150353713006032729772569239 "HTTP/2 200 OK"
+2026-04-27 08:08:37,202 [INFO] HTTP Request: GET https://clob.polymarket.com/neg-risk?token_id=2754093488157750620514999727246832823809160371045150353713006032729772569239 "HTTP/2 200 OK"
+2026-04-27 08:08:37,355 [INFO] HTTP Request: GET https://clob.polymarket.com/fee-rate?token_id=2754093488157750620514999727246832823809160371045150353713006032729772569239 "HTTP/2 200 OK"
+2026-04-27 08:08:37,531 [INFO] HTTP Request: POST https://clob.polymarket.com/order "HTTP/2 400 Bad Request"
+2026-04-27 08:08:37,532 [ERROR] Order placement failed: PolyApiException[status_code=400, error_message={'error': 'not enough balance / allowance: the balance is not enough -> balance: 0, order amount: 9640000'}]
+2026-04-27 08:09:42,921 [INFO] [0x6e1d...d0fa] New trade detected!
+   Trade ID   : {'proxyWallet': '0x6e1d5040d0ac73709b0621f620d2a60b80d2d0fa', 'timestamp': 1777266562, 'conditionId': '0x43614e28cda18e00c8232045f8fb7dcc4f77ec83ebbe20eefc543fc5c49f26f7', 'type': 'TRADE', 'size': 5, 'usdcSize': 0.6, 'transactionHash': '0xd6d8712d8dd034b016dcb966fe979536808853f07b532683d5f8c3c259957606', 'price': 0.12, 'asset': '4679926245775684873988689051936220854012291067284784042489066372007226655155', 'side': 'BUY', 'outcomeIndex': 1, 'title': 'Will Bitcoin dip to $78,000 April 27-May 3?', 'slug': 'will-bitcoin-dip-to-78k-april-27-may-3', 'icon': 'https://polymarket-upload.s3.us-east-2.amazonaws.com/BTC+fullsize.png', 'eventSlug': 'what-price-will-bitcoin-hit-april-27-may-3', 'outcome': 'No', 'name': '0x6E1d5040d0ac73709B0621F620d2a60b80d2D0F', 'pseudonym': 'Respectful-Clan', 'bio': '', 'profileImage': '', 'profileImageOptimized': '', 'source_wallet': '0x6e1d5040d0ac73709b0621f620d2a60b80d2d0fa'}
+   Market     : None
+   Side      : BUY
+   Outcome   : No
+   Price     : $0.1200
+   Target    : $0.60
+   Our Size  : $10.00 (budget $10)
+
+2026-04-27 08:09:43,530 [WARNING] Telegram rate limited, waiting 1s...
+2026-04-27 08:09:45,030 [WARNING] Telegram rate limited, waiting 2s...
+2026-04-27 08:09:47,763 [WARNING] Telegram rate limited, waiting 4s...
+2026-04-27 08:09:52,339 [INFO] HTTP Request: GET https://clob.polymarket.com/tick-size?token_id=4679926245775684873988689051936220854012291067284784042489066372007226655155 "HTTP/2 200 OK"
+2026-04-27 08:09:52,694 [INFO] HTTP Request: GET https://clob.polymarket.com/neg-risk?token_id=4679926245775684873988689051936220854012291067284784042489066372007226655155 "HTTP/2 200 OK"
+2026-04-27 08:09:52,851 [INFO] HTTP Request: GET https://clob.polymarket.com/fee-rate?token_id=4679926245775684873988689051936220854012291067284784042489066372007226655155 "HTTP/2 200 OK"
+2026-04-27 08:09:53,052 [INFO] HTTP Request: POST https://clob.polymarket.com/order "HTTP/2 400 Bad Request"
+2026-04-27 08:09:53,053 [ERROR] Order placement failed: PolyApiException[status_code=400, error_message={'error': 'not enough balance / allowance: the balance is not enough -> balance: 0, order amount: 1200000'}]
+2026-04-27 08:09:53,056 [INFO] [0x6e1d...d0fa] New trade detected!
+   Trade ID   : {'proxyWallet': '0x6e1d5040d0ac73709b0621f620d2a60b80d2d0fa', 'timestamp': 1777266562, 'conditionId': '0x43614e28cda18e00c8232045f8fb7dcc4f77ec83ebbe20eefc543fc5c49f26f7', 'type': 'TRADE', 'size': 5, 'usdcSize': 0.6, 'transactionHash': '0x5dc8f3fd0989a505766ba3aa8a36ee4c76a111fe1e335c2210ad35ee08bc1232', 'price': 0.12, 'asset': '4679926245775684873988689051936220854012291067284784042489066372007226655155', 'side': 'BUY', 'outcomeIndex': 1, 'title': 'Will Bitcoin dip to $78,000 April 27-May 3?', 'slug': 'will-bitcoin-dip-to-78k-april-27-may-3', 'icon': 'https://polymarket-upload.s3.us-east-2.amazonaws.com/BTC+fullsize.png', 'eventSlug': 'what-price-will-bitcoin-hit-april-27-may-3', 'outcome': 'No', 'name': '0x6E1d5040d0ac73709B0621F620d2a60b80d2D0F', 'pseudonym': 'Respectful-Clan', 'bio': '', 'profileImage': '', 'profileImageOptimized': '', 'source_wallet': '0x6e1d5040d0ac73709b0621f620d2a60b80d2d0fa'}
+   Market     : None
+   Side      : BUY
+   Outcome   : No
+   Price     : $0.1200
+   Target    : $0.60
+   Our Size  : $10.00 (budget $10)
+
+2026-04-27 08:09:53,567 [WARNING] Telegram rate limited, waiting 1s...
+2026-04-27 08:09:55,207 [WARNING] Telegram rate limited, waiting 2s...
+2026-04-27 08:09:57,767 [WARNING] Telegram rate limited, waiting 4s...
