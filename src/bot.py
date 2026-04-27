@@ -200,8 +200,8 @@ async def place_copy_order(session: aiohttp.ClientSession, trade: dict, our_size
         logger.info("Order posted: %s", resp)
         return True
 
-    except ImportError:
-        logger.error("py-clob-client-v2 not installed. Run: pip install py-clob-client-v2")
+    except ImportError as ie:
+        logger.error("py-clob-client-v2 not installed. Run: pip install py-clob-client-v2. ImportError: %s", ie)
         return False
     except Exception as e:
         logger.error("Order placement failed: %s", e)
