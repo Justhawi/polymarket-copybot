@@ -77,35 +77,25 @@ def save_positions(positions: dict) -> None:
 # ─── Telegram Notifications ─────────────────────────────────────────────────
 async def send_telegram_message(message: str) -> bool:
     if not TELEGRAM_ENABLED:
-        logger.warning("Telegram disabled, skipping notification")
         return False
     if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
-        logger.warning("TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID not set")
         return False
     
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
     payload = {"chat_id": TELEGRAM_CHAT_ID, "text": message, "parse_mode": "HTML"}
     
-    for attempt in range(5):
-        try:
-            async with aiohttp.ClientSession() as session:
-                async with session.post(url, json=payload, timeout=aiohttp.ClientTimeout(total=10)) as resp:
-                    if resp.status == 200:
-                        logger.info("Telegram signal sent!")
-                        return True
-                    elif resp.status == 429:
-                        wait_time = 2 ** attempt
-                        logger.warning(f"Telegram rate limited, retrying in {wait_time}s...")
-                        await asyncio.sleep(wait_time)
-                        continue
-                    else:
-                        logger.warning(f"Telegram response: {resp.status}")
-                        return False
-        except Exception as e:
-            logger.error("Telegram error: %s", e)
-            await asyncio.sleep(1)
-    logger.warning("Telegram failed after 5 attempts")
-    return False
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.post(url, json=payload, timeout=aiohttp.ClientTimeout(total=5)) as resp:
+                if resp.status == 200:
+                    logger.info("Telegram signal sent!")
+                    return True
+                else:
+                    logger.warning(f"Telegram response: {resp.status}")
+                    return False
+    except Exception as e:
+        logger.error(f"Telegram error: {e}")
+        return False
 
 
 # ─── Helpers ─────────────────────────────────────────────────────────────────
@@ -253,6 +243,14 @@ async def process_new_trade(session: aiohttp.ClientSession, trade: dict) -> None
         price, size_usd, float(our_size), BUDGET_USD,
     )
 
+    if not PRIVATE_KEY:
+        logger.warning("⚠️  No PRIVATE_KEY set. Cannot place live orders.")
+        return
+
+    if float(our_size) < 1.0:
+        logger.warning("Trade size $%.2f too small, skipping.", float(our_size))
+        return
+
     telegram_msg = (
         f"🔔 <b>New Trading Signal!</b>\n\n"
         f"👤 <b>Trader:</b> <code>{source_short}</code>\n"
@@ -263,23 +261,14 @@ async def process_new_trade(session: aiohttp.ClientSession, trade: dict) -> None
         f"💵 <b>Target Size:</b> ${size_usd:.2f}\n"
         f"💵 <b>Your Size:</b> ${float(our_size):.2f}\n"
     )
-    await send_telegram_message(telegram_msg)
-
-    if DRY_RUN:
-        logger.info("💤 DRY RUN — skipping live order. Set DRY_RUN=false to trade.")
-        return
-
-    if not PRIVATE_KEY:
-        logger.warning("⚠️  No PRIVATE_KEY set. Cannot place live orders.")
-        return
-
-    if float(our_size) < 5.0:
-        logger.warning("Trade size $%.2f too small (min $5), skipping.", float(our_size))
-        return
-
+    
+    # Place order FIRST for speed - don't wait for Telegram
     success = await place_copy_order(session, trade, our_size)
     status  = "✅ placed" if success else "❌ failed"
     logger.info("Order status: %s", status)
+    
+    # Send Telegram signal after (await but don't block order)
+    await send_telegram_message(telegram_msg)
 
     if success:
         if side == "BUY":

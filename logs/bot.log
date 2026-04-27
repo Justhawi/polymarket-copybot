@@ -5930,3 +5930,345 @@
 2026-04-27 08:09:53,567 [WARNING] Telegram rate limited, waiting 1s...
 2026-04-27 08:09:55,207 [WARNING] Telegram rate limited, waiting 2s...
 2026-04-27 08:09:57,767 [WARNING] Telegram rate limited, waiting 4s...
+2026-04-27 08:14:31,310 [INFO] ============================================================
+2026-04-27 08:14:31,311 [INFO] Polymarket Copy Bot starting up
+2026-04-27 08:14:31,311 [INFO]   Targets : 0x6e1d...d0fa, 0x161e...6ef0
+2026-04-27 08:14:31,311 [INFO]   Total Budget: $20 (split across 2 traders)
+2026-04-27 08:14:31,311 [INFO]   Per Trader: $10
+2026-04-27 08:14:31,311 [INFO]   Poll    : every 1s
+2026-04-27 08:14:31,311 [INFO]   DRY RUN : False
+2026-04-27 08:14:31,311 [INFO]   Open Positions: 2
+2026-04-27 08:14:31,311 [INFO] ============================================================
+2026-04-27 08:14:31,312 [INFO] Fetching existing trades to avoid replaying history...
+2026-04-27 08:14:31,941 [INFO]   Seeded 40 known trade IDs.
+2026-04-27 08:14:32,555 [WARNING] Telegram rate limited, retrying in 1s...
+2026-04-27 08:14:34,119 [WARNING] Telegram rate limited, retrying in 2s...
+2026-04-27 08:14:36,673 [WARNING] Telegram rate limited, retrying in 4s...
+2026-04-27 08:14:41,256 [WARNING] Telegram rate limited, retrying in 8s...
+2026-04-27 08:14:49,769 [WARNING] Telegram rate limited, retrying in 16s...
+2026-04-27 08:15:05,776 [WARNING] Telegram failed after 5 attempts
+2026-04-27 08:15:06,388 [INFO] [0x6e1d...d0fa] New trade detected!
+   Trade ID   : {'proxyWallet': '0x6e1d5040d0ac73709b0621f620d2a60b80d2d0fa', 'timestamp': 1777266868, 'conditionId': '0x43614e28cda18e00c8232045f8fb7dcc4f77ec83ebbe20eefc543fc5c49f26f7', 'type': 'TRADE', 'size': 6.521737, 'usdcSize': 0.521739, 'transactionHash': '0x7a94b6154875ce7d0148ff08d31b7bbffa2383dfc362cb04cdc8054ef9d0b8e9', 'price': 0.08000000613333534, 'asset': '4679926245775684873988689051936220854012291067284784042489066372007226655155', 'side': 'BUY', 'outcomeIndex': 1, 'title': 'Will Bitcoin dip to $78,000 April 27-May 3?', 'slug': 'will-bitcoin-dip-to-78k-april-27-may-3', 'icon': 'https://polymarket-upload.s3.us-east-2.amazonaws.com/BTC+fullsize.png', 'eventSlug': 'what-price-will-bitcoin-hit-april-27-may-3', 'outcome': 'No', 'name': '0x6E1d5040d0ac73709B0621F620d2a60b80d2D0F', 'pseudonym': 'Respectful-Clan', 'bio': '', 'profileImage': '', 'profileImageOptimized': '', 'source_wallet': '0x6e1d5040d0ac73709b0621f620d2a60b80d2d0fa'}
+   Market     : None
+   Side      : BUY
+   Outcome   : No
+   Price     : $0.0800
+   Target    : $0.52
+   Our Size  : $10.00 (budget $10)
+
+2026-04-27 08:15:06,892 [WARNING] Telegram rate limited, retrying in 1s...
+2026-04-27 08:15:08,485 [WARNING] Telegram rate limited, retrying in 2s...
+2026-04-27 08:15:10,999 [WARNING] Telegram rate limited, retrying in 4s...
+2026-04-27 08:15:15,622 [WARNING] Telegram rate limited, retrying in 8s...
+2026-04-27 08:15:24,154 [WARNING] Telegram rate limited, retrying in 16s...
+2026-04-27 08:15:40,165 [WARNING] Telegram failed after 5 attempts
+2026-04-27 08:15:42,250 [INFO] HTTP Request: GET https://clob.polymarket.com/tick-size?token_id=4679926245775684873988689051936220854012291067284784042489066372007226655155 "HTTP/2 200 OK"
+2026-04-27 08:15:42,451 [INFO] HTTP Request: GET https://clob.polymarket.com/neg-risk?token_id=4679926245775684873988689051936220854012291067284784042489066372007226655155 "HTTP/2 200 OK"
+2026-04-27 08:15:42,655 [INFO] HTTP Request: GET https://clob.polymarket.com/fee-rate?token_id=4679926245775684873988689051936220854012291067284784042489066372007226655155 "HTTP/2 200 OK"
+2026-04-27 08:15:42,862 [INFO] HTTP Request: POST https://clob.polymarket.com/order "HTTP/2 400 Bad Request"
+2026-04-27 08:15:42,864 [ERROR] Order placement failed: PolyApiException[status_code=400, error_message={'error': 'not enough balance / allowance: the balance is not enough -> balance: 0, order amount: 800000'}]
+2026-04-27 08:15:44,552 [INFO] [0x6e1d...d0fa] New trade detected!
+   Trade ID   : {'proxyWallet': '0x6e1d5040d0ac73709b0621f620d2a60b80d2d0fa', 'timestamp': 1777266902, 'conditionId': '0xea17d3e6dc88b83572e25e29c937a5e9d85588ca42f91535595258272152f583', 'type': 'TRADE', 'size': 102.24632, 'usdcSize': 2.31, 'transactionHash': '0x6a2bc88d7e0fed40c89fc7f8e6d616a28444d97c390ccab1e5a9f7a441e29da1', 'price': 0.021, 'asset': '14063937717575485549190315155598816214381602029538030564288260170906454448651', 'side': 'BUY', 'outcomeIndex': 1, 'title': 'Will the price of Bitcoin be above $76,000 on April 27?', 'slug': 'bitcoin-above-76k-on-april-27', 'icon': 'https://polymarket-upload.s3.us-east-2.amazonaws.com/BTC+fullsize.png', 'eventSlug': 'bitcoin-above-on-april-27', 'outcome': 'No', 'name': '0x6E1d5040d0ac73709B0621F620d2a60b80d2D0F', 'pseudonym': 'Respectful-Clan', 'bio': '', 'profileImage': '', 'profileImageOptimized': '', 'source_wallet': '0x6e1d5040d0ac73709b0621f620d2a60b80d2d0fa'}
+   Market     : None
+   Side      : BUY
+   Outcome   : No
+   Price     : $0.0210
+   Target    : $2.31
+   Our Size  : $10.00 (budget $10)
+
+2026-04-27 08:15:45,114 [WARNING] Telegram rate limited, retrying in 1s...
+2026-04-27 08:15:46,759 [WARNING] Telegram rate limited, retrying in 2s...
+2026-04-27 08:15:49,414 [WARNING] Telegram rate limited, retrying in 4s...
+2026-04-27 08:15:54,022 [WARNING] Telegram rate limited, retrying in 8s...
+2026-04-27 08:16:02,546 [WARNING] Telegram rate limited, retrying in 16s...
+2026-04-27 08:16:18,556 [WARNING] Telegram failed after 5 attempts
+2026-04-27 08:16:19,110 [INFO] HTTP Request: GET https://clob.polymarket.com/tick-size?token_id=14063937717575485549190315155598816214381602029538030564288260170906454448651 "HTTP/2 200 OK"
+2026-04-27 08:16:19,317 [INFO] HTTP Request: GET https://clob.polymarket.com/neg-risk?token_id=14063937717575485549190315155598816214381602029538030564288260170906454448651 "HTTP/2 200 OK"
+2026-04-27 08:16:19,540 [INFO] HTTP Request: GET https://clob.polymarket.com/fee-rate?token_id=14063937717575485549190315155598816214381602029538030564288260170906454448651 "HTTP/2 200 OK"
+2026-04-27 08:16:19,756 [INFO] HTTP Request: POST https://clob.polymarket.com/order "HTTP/2 400 Bad Request"
+2026-04-27 08:16:19,757 [ERROR] Order placement failed: PolyApiException[status_code=400, error_message={'error': 'not enough balance / allowance: the balance is not enough -> balance: 0, order amount: 210000'}]
+2026-04-27 08:16:21,458 [INFO] [0x6e1d...d0fa] New trade detected!
+   Trade ID   : {'proxyWallet': '0x6e1d5040d0ac73709b0621f620d2a60b80d2d0fa', 'timestamp': 1777266958, 'conditionId': '0x341fabc44253f055da162515aa9d4b781cf5c8c6d80a2e74017319d0587392d9', 'type': 'TRADE', 'size': 1.176466, 'usdcSize': 0.17647, 'transactionHash': '0xcc0509948bbfcacd2997140c7654897ee5bafc0f55e1aa66feb9b898e1e2089b', 'price': 0.1500000850003315, 'asset': '88302563181756396262628774561396118315087273493139048326752560950026715233290', 'side': 'BUY', 'outcomeIndex': 0, 'title': 'Will the price of Bitcoin be between $80,000 and $82,000 on May 1?', 'slug': 'will-the-price-of-bitcoin-be-between-80000-82000-on-may-1', 'icon': 'https://polymarket-upload.s3.us-east-2.amazonaws.com/BTC+fullsize.png', 'eventSlug': 'bitcoin-price-on-may-1', 'outcome': 'Yes', 'name': '0x6E1d5040d0ac73709B0621F620d2a60b80d2D0F', 'pseudonym': 'Respectful-Clan', 'bio': '', 'profileImage': '', 'profileImageOptimized': '', 'source_wallet': '0x6e1d5040d0ac73709b0621f620d2a60b80d2d0fa'}
+   Market     : None
+   Side      : BUY
+   Outcome   : Yes
+   Price     : $0.1500
+   Target    : $0.18
+   Our Size  : $10.00 (budget $10)
+
+2026-04-27 08:16:22,023 [WARNING] Telegram rate limited, retrying in 1s...
+2026-04-27 08:16:23,655 [WARNING] Telegram rate limited, retrying in 2s...
+2026-04-27 08:16:26,286 [WARNING] Telegram rate limited, retrying in 4s...
+2026-04-27 08:20:53,007 [INFO] ============================================================
+2026-04-27 08:20:53,007 [INFO] Polymarket Copy Bot starting up
+2026-04-27 08:20:53,007 [INFO]   Targets : 0x6e1d...d0fa, 0x161e...6ef0
+2026-04-27 08:20:53,008 [INFO]   Total Budget: $20 (split across 2 traders)
+2026-04-27 08:20:53,008 [INFO]   Per Trader: $10
+2026-04-27 08:20:53,008 [INFO]   Poll    : every 1s
+2026-04-27 08:20:53,008 [INFO]   DRY RUN : False
+2026-04-27 08:20:53,008 [INFO]   Open Positions: 2
+2026-04-27 08:20:53,008 [INFO] ============================================================
+2026-04-27 08:20:53,008 [INFO] Fetching existing trades to avoid replaying history...
+2026-04-27 08:20:53,628 [INFO]   Seeded 40 known trade IDs.
+2026-04-27 08:20:54,069 [WARNING] Telegram response: 404
+2026-04-27 08:20:55,688 [INFO] [0x6e1d...d0fa] New trade detected!
+   Trade ID   : {'proxyWallet': '0x6e1d5040d0ac73709b0621f620d2a60b80d2d0fa', 'timestamp': 1777267246, 'conditionId': '0x48c2349d6e5bccb597490ca8c75f1cdba0f537dd85a3d347273d488474a7892b', 'type': 'TRADE', 'size': 6301, 'usdcSize': 31.505, 'transactionHash': '0x3124b586d12b6e9380e6976c8ec6130af2996d7fdc630a9b37ff312e94dc8406', 'price': 0.005, 'asset': '99279174918758481936060021526005828162799890823685775004186039256203571224381', 'side': 'BUY', 'outcomeIndex': 1, 'title': 'Will the price of Bitcoin be above $74,000 on April 27?', 'slug': 'bitcoin-above-74k-on-april-27', 'icon': 'https://polymarket-upload.s3.us-east-2.amazonaws.com/BTC+fullsize.png', 'eventSlug': 'bitcoin-above-on-april-27', 'outcome': 'No', 'name': '0x6E1d5040d0ac73709B0621F620d2a60b80d2D0F', 'pseudonym': 'Respectful-Clan', 'bio': '', 'profileImage': '', 'profileImageOptimized': '', 'source_wallet': '0x6e1d5040d0ac73709b0621f620d2a60b80d2d0fa'}
+   Market     : None
+   Side      : BUY
+   Outcome   : No
+   Price     : $0.0050
+   Target    : $31.50
+   Our Size  : $10.00 (budget $10)
+
+2026-04-27 08:20:56,149 [WARNING] Telegram response: 404
+2026-04-27 08:20:58,241 [INFO] HTTP Request: GET https://clob.polymarket.com/tick-size?token_id=99279174918758481936060021526005828162799890823685775004186039256203571224381 "HTTP/2 200 OK"
+2026-04-27 08:20:58,435 [INFO] HTTP Request: GET https://clob.polymarket.com/neg-risk?token_id=99279174918758481936060021526005828162799890823685775004186039256203571224381 "HTTP/2 200 OK"
+2026-04-27 08:20:58,593 [INFO] HTTP Request: GET https://clob.polymarket.com/fee-rate?token_id=99279174918758481936060021526005828162799890823685775004186039256203571224381 "HTTP/2 200 OK"
+2026-04-27 08:20:58,827 [INFO] HTTP Request: POST https://clob.polymarket.com/order "HTTP/2 400 Bad Request"
+2026-04-27 08:20:58,828 [ERROR] Order placement failed: PolyApiException[status_code=400, error_message={'error': 'not enough balance / allowance: the balance is not enough -> balance: 0, order amount: 50000'}]
+2026-04-27 08:20:58,832 [INFO] [0x6e1d...d0fa] New trade detected!
+   Trade ID   : {'proxyWallet': '0x6e1d5040d0ac73709b0621f620d2a60b80d2d0fa', 'timestamp': 1777267232, 'conditionId': '0x89a4e11edaac57a32a2ae33192ea26ff8893059441a22fba8f1bf0a006dc57fa', 'type': 'TRADE', 'size': 480.18152, 'usdcSize': 263.41, 'transactionHash': '0x533bdb95921192c4275d40299edae8d8b17a0c83224848cdf30355109492d255', 'price': 0.53, 'asset': '61215732717375485523916218447252037704001944816055829230834834395070098403741', 'side': 'BUY', 'outcomeIndex': 1, 'title': 'Will the price of Bitcoin be between $76,000 and $78,000 on April 27?', 'slug': 'will-the-price-of-bitcoin-be-between-76000-78000-on-april-27', 'icon': 'https://polymarket-upload.s3.us-east-2.amazonaws.com/BTC+fullsize.png', 'eventSlug': 'bitcoin-price-on-april-27', 'outcome': 'No', 'name': '0x6E1d5040d0ac73709B0621F620d2a60b80d2D0F', 'pseudonym': 'Respectful-Clan', 'bio': '', 'profileImage': '', 'profileImageOptimized': '', 'source_wallet': '0x6e1d5040d0ac73709b0621f620d2a60b80d2d0fa'}
+   Market     : None
+   Side      : BUY
+   Outcome   : No
+   Price     : $0.5300
+   Target    : $263.41
+   Our Size  : $10.00 (budget $10)
+
+2026-04-27 08:20:59,366 [WARNING] Telegram response: 404
+2026-04-27 08:20:59,530 [INFO] HTTP Request: GET https://clob.polymarket.com/tick-size?token_id=61215732717375485523916218447252037704001944816055829230834834395070098403741 "HTTP/2 200 OK"
+2026-04-27 08:20:59,689 [INFO] HTTP Request: GET https://clob.polymarket.com/neg-risk?token_id=61215732717375485523916218447252037704001944816055829230834834395070098403741 "HTTP/2 200 OK"
+2026-04-27 08:20:59,850 [INFO] HTTP Request: GET https://clob.polymarket.com/fee-rate?token_id=61215732717375485523916218447252037704001944816055829230834834395070098403741 "HTTP/2 200 OK"
+2026-04-27 08:21:00,031 [INFO] HTTP Request: POST https://clob.polymarket.com/order "HTTP/2 400 Bad Request"
+2026-04-27 08:21:00,031 [ERROR] Order placement failed: PolyApiException[status_code=400, error_message={'error': 'not enough balance / allowance: the balance is not enough -> balance: 0, order amount: 5300000'}]
+2026-04-27 08:22:14,010 [INFO] ============================================================
+2026-04-27 08:22:14,011 [INFO] Polymarket Copy Bot starting up
+2026-04-27 08:22:14,011 [INFO]   Targets : 0x204f...5e14, 0x161e...6ef0
+2026-04-27 08:22:14,011 [INFO]   Total Budget: $20 (split across 2 traders)
+2026-04-27 08:22:14,011 [INFO]   Per Trader: $10
+2026-04-27 08:22:14,011 [INFO]   Poll    : every 1s
+2026-04-27 08:22:14,012 [INFO]   DRY RUN : False
+2026-04-27 08:22:14,012 [INFO]   Open Positions: 2
+2026-04-27 08:22:14,012 [INFO] ============================================================
+2026-04-27 08:22:14,012 [INFO] Fetching existing trades to avoid replaying history...
+2026-04-27 08:22:14,742 [INFO]   Seeded 40 known trade IDs.
+2026-04-27 08:22:15,257 [WARNING] Telegram response: 404
+2026-04-27 08:23:26,055 [INFO] ============================================================
+2026-04-27 08:23:26,056 [INFO] Polymarket Copy Bot starting up
+2026-04-27 08:23:26,056 [INFO]   Targets : 0x204f...5e14, 0x161e...6ef0
+2026-04-27 08:23:26,056 [INFO]   Total Budget: $20 (split across 2 traders)
+2026-04-27 08:23:26,056 [INFO]   Per Trader: $10
+2026-04-27 08:23:26,056 [INFO]   Poll    : every 1s
+2026-04-27 08:23:26,056 [INFO]   DRY RUN : False
+2026-04-27 08:23:26,056 [INFO]   Open Positions: 2
+2026-04-27 08:23:26,057 [INFO] ============================================================
+2026-04-27 08:23:26,057 [INFO] Fetching existing trades to avoid replaying history...
+2026-04-27 08:23:26,728 [INFO]   Seeded 40 known trade IDs.
+2026-04-27 08:23:27,222 [WARNING] Telegram response: 404
+2026-04-27 08:23:44,683 [INFO] [0x204f...5e14] New trade detected!
+   Trade ID   : {'proxyWallet': '0x204f72f35326db932158cba6adff0b9a1da95e14', 'timestamp': 1777267400, 'conditionId': '0x1009d8529f55a282318de87f9a70c63a8a7e99293748d04dd6a16e754b95efad', 'type': 'TRADE', 'size': 20.7795, 'usdcSize': 13.65, 'transactionHash': '0x8f2367a557ddcfe96d402aa4c1e87d484e8a09c90cd3bd04eadfa4dbee478866', 'price': 0.65, 'asset': '28026108893551789985846835905241725040720474505984159165168764678558340586870', 'side': 'BUY', 'outcomeIndex': 1, 'title': 'RCD Espanyol de Barcelona leading at halftime?', 'slug': 'lal-esp-lev-2026-04-27-halftime-result-home', 'icon': '', 'eventSlug': 'lal-esp-lev-2026-04-27-halftime-result', 'outcome': 'No', 'name': 'swisstony', 'pseudonym': 'Frail-Possible', 'bio': 'loincloth chic', 'profileImage': '', 'profileImageOptimized': '', 'source_wallet': '0x204f72f35326db932158cba6adff0b9a1da95e14'}
+   Market     : None
+   Side      : BUY
+   Outcome   : No
+   Price     : $0.6500
+   Target    : $13.65
+   Our Size  : $10.00 (budget $10)
+
+2026-04-27 08:23:45,147 [WARNING] Telegram response: 404
+2026-04-27 08:23:47,503 [INFO] HTTP Request: GET https://clob.polymarket.com/tick-size?token_id=28026108893551789985846835905241725040720474505984159165168764678558340586870 "HTTP/2 200 OK"
+2026-04-27 08:23:47,677 [INFO] HTTP Request: GET https://clob.polymarket.com/neg-risk?token_id=28026108893551789985846835905241725040720474505984159165168764678558340586870 "HTTP/2 200 OK"
+2026-04-27 08:23:47,840 [INFO] HTTP Request: GET https://clob.polymarket.com/fee-rate?token_id=28026108893551789985846835905241725040720474505984159165168764678558340586870 "HTTP/2 200 OK"
+2026-04-27 08:23:48,022 [INFO] HTTP Request: POST https://clob.polymarket.com/order "HTTP/2 400 Bad Request"
+2026-04-27 08:23:48,027 [ERROR] Order placement failed: PolyApiException[status_code=400, error_message={'error': 'not enough balance / allowance: the balance is not enough -> balance: 0, order amount: 6500000'}]
+2026-04-27 08:24:17,034 [INFO] ============================================================
+2026-04-27 08:24:17,034 [INFO] Polymarket Copy Bot starting up
+2026-04-27 08:24:17,034 [INFO]   Targets : 0x204f...5e14, 0x161e...6ef0
+2026-04-27 08:24:17,035 [INFO]   Total Budget: $20 (split across 2 traders)
+2026-04-27 08:24:17,035 [INFO]   Per Trader: $10
+2026-04-27 08:24:17,035 [INFO]   Poll    : every 1s
+2026-04-27 08:24:17,035 [INFO]   DRY RUN : False
+2026-04-27 08:24:17,035 [INFO]   Open Positions: 2
+2026-04-27 08:24:17,035 [INFO] ============================================================
+2026-04-27 08:24:17,035 [INFO] Fetching existing trades to avoid replaying history...
+2026-04-27 08:24:17,654 [INFO]   Seeded 40 known trade IDs.
+2026-04-27 08:24:18,111 [WARNING] Telegram response: 404
+2026-04-27 08:24:30,372 [INFO] [0x204f...5e14] New trade detected!
+   Trade ID   : {'proxyWallet': '0x204f72f35326db932158cba6adff0b9a1da95e14', 'timestamp': 1777267454, 'conditionId': '0x92b3e5f32f473a6ce622d738304f27d749c7797875ddc126a0d19edc4f7f0fb0', 'type': 'TRADE', 'size': 9.988, 'usdcSize': 9.6, 'transactionHash': '0x98989c627b09854c1f49b1c4ef3e8e837db485b4f291f2b01f4886f87e0526a7', 'price': 0.96, 'asset': '15412779061923601151530305443616595392216227245475788571632383728878340243328', 'side': 'BUY', 'outcomeIndex': 1, 'title': 'Spread: SC Freiburg (-2.5)', 'slug': 'uel-scb-scf-2026-04-30-spread-away-2pt5', 'icon': 'https://polymarket-upload.s3.us-east-2.amazonaws.com/uel.png', 'eventSlug': 'uel-scb-scf-2026-04-30-more-markets', 'outcome': 'SC Braga', 'name': 'swisstony', 'pseudonym': 'Frail-Possible', 'bio': 'loincloth chic', 'profileImage': '', 'profileImageOptimized': '', 'source_wallet': '0x204f72f35326db932158cba6adff0b9a1da95e14'}
+   Market     : None
+   Side      : BUY
+   Outcome   : SC Braga
+   Price     : $0.9600
+   Target    : $9.60
+   Our Size  : $10.00 (budget $10)
+
+2026-04-27 08:24:30,817 [WARNING] Telegram response: 404
+2026-04-27 08:24:32,948 [INFO] HTTP Request: GET https://clob.polymarket.com/tick-size?token_id=15412779061923601151530305443616595392216227245475788571632383728878340243328 "HTTP/2 200 OK"
+2026-04-27 08:24:33,107 [INFO] HTTP Request: GET https://clob.polymarket.com/neg-risk?token_id=15412779061923601151530305443616595392216227245475788571632383728878340243328 "HTTP/2 200 OK"
+2026-04-27 08:24:33,338 [INFO] HTTP Request: GET https://clob.polymarket.com/fee-rate?token_id=15412779061923601151530305443616595392216227245475788571632383728878340243328 "HTTP/2 200 OK"
+2026-04-27 08:24:33,511 [INFO] HTTP Request: POST https://clob.polymarket.com/order "HTTP/2 400 Bad Request"
+2026-04-27 08:24:33,515 [ERROR] Order placement failed: PolyApiException[status_code=400, error_message={'error': 'not enough balance / allowance: the balance is not enough -> balance: 0, order amount: 9600000'}]
+2026-04-27 08:28:00,080 [INFO] ============================================================
+2026-04-27 08:28:00,081 [INFO] Polymarket Copy Bot starting up
+2026-04-27 08:28:00,081 [INFO]   Targets : 0x204f...5e14, 0x161e...6ef0
+2026-04-27 08:28:00,081 [INFO]   Total Budget: $20 (split across 2 traders)
+2026-04-27 08:28:00,081 [INFO]   Per Trader: $10
+2026-04-27 08:28:00,081 [INFO]   Poll    : every 1s
+2026-04-27 08:28:00,081 [INFO]   DRY RUN : False
+2026-04-27 08:28:00,081 [INFO]   Open Positions: 2
+2026-04-27 08:28:00,081 [INFO] ============================================================
+2026-04-27 08:28:00,081 [INFO] Fetching existing trades to avoid replaying history...
+2026-04-27 08:28:00,782 [INFO]   Seeded 40 known trade IDs.
+2026-04-27 08:28:01,249 [WARNING] Telegram response: 404
+2026-04-27 08:35:32,681 [INFO] ============================================================
+2026-04-27 08:35:32,682 [INFO] Polymarket Copy Bot starting up
+2026-04-27 08:35:32,682 [INFO]   Targets : 0x204f...5e14, 0x161e...6ef0
+2026-04-27 08:35:32,682 [INFO]   Total Budget: $5 (split across 2 traders)
+2026-04-27 08:35:32,682 [INFO]   Per Trader: $2.5
+2026-04-27 08:35:32,682 [INFO]   Poll    : every 1s
+2026-04-27 08:35:32,682 [INFO]   DRY RUN : False
+2026-04-27 08:35:32,682 [INFO]   Open Positions: 2
+2026-04-27 08:35:32,682 [INFO] ============================================================
+2026-04-27 08:35:32,682 [INFO] Fetching existing trades to avoid replaying history...
+2026-04-27 08:35:33,292 [INFO]   Seeded 40 known trade IDs.
+2026-04-27 08:35:33,749 [WARNING] Telegram response: 404
+2026-04-27 08:35:42,271 [INFO] [0x204f...5e14] New trade detected!
+   Trade ID   : {'proxyWallet': '0x204f72f35326db932158cba6adff0b9a1da95e14', 'timestamp': 1777268132, 'conditionId': '0x778534c97fb3c9a1df75d612199ec47ec2a5ce121628a57c96bccd5f97cd9499', 'type': 'TRADE', 'size': 565.9776, 'usdcSize': 241.92, 'transactionHash': '0xfe6fe925da06a73352cb88b5e6add96ad7d154da38ba0729b1024fa92d1360f5', 'price': 0.42, 'asset': '59969638069218018650005179728509872524175180771226153663836633123367082108511', 'side': 'BUY', 'outcomeIndex': 0, 'title': 'Will Olympique Lyonnais win on 2026-05-03?', 'slug': 'fl1-lyo-ren-2026-05-03-lyo', 'icon': 'https://polymarket-upload.s3.us-east-2.amazonaws.com/league-fl1.png', 'eventSlug': 'fl1-lyo-ren-2026-05-03', 'outcome': 'Yes', 'name': 'swisstony', 'pseudonym': 'Frail-Possible', 'bio': 'loincloth chic', 'profileImage': '', 'profileImageOptimized': '', 'source_wallet': '0x204f72f35326db932158cba6adff0b9a1da95e14'}
+   Market     : None
+   Side      : BUY
+   Outcome   : Yes
+   Price     : $0.4200
+   Target    : $241.92
+   Our Size  : $2.50 (budget $2.5)
+
+2026-04-27 08:35:45,889 [INFO] HTTP Request: GET https://clob.polymarket.com/tick-size?token_id=59969638069218018650005179728509872524175180771226153663836633123367082108511 "HTTP/2 200 OK"
+2026-04-27 08:35:46,059 [INFO] HTTP Request: GET https://clob.polymarket.com/neg-risk?token_id=59969638069218018650005179728509872524175180771226153663836633123367082108511 "HTTP/2 200 OK"
+2026-04-27 08:35:46,229 [INFO] HTTP Request: GET https://clob.polymarket.com/fee-rate?token_id=59969638069218018650005179728509872524175180771226153663836633123367082108511 "HTTP/2 200 OK"
+2026-04-27 08:35:46,413 [INFO] HTTP Request: POST https://clob.polymarket.com/order "HTTP/2 400 Bad Request"
+2026-04-27 08:35:46,419 [ERROR] Order placement failed: PolyApiException[status_code=400, error_message={'error': 'order 0xc2267255eb5f16c30fede2836dc69034f18d283344a6166b7dad370878cbfae5 is invalid. Size (2.5) lower than the minimum: 5'}]
+2026-04-27 08:35:46,426 [INFO] [0x204f...5e14] New trade detected!
+   Trade ID   : {'proxyWallet': '0x204f72f35326db932158cba6adff0b9a1da95e14', 'timestamp': 1777268132, 'conditionId': '0x778534c97fb3c9a1df75d612199ec47ec2a5ce121628a57c96bccd5f97cd9499', 'type': 'TRADE', 'size': 53.0604, 'usdcSize': 22.68, 'transactionHash': '0xc136ab550e0baa35fb8d3f7f581224cb0948b40039d9b8525cee5295ba1a4eef', 'price': 0.42, 'asset': '59969638069218018650005179728509872524175180771226153663836633123367082108511', 'side': 'BUY', 'outcomeIndex': 0, 'title': 'Will Olympique Lyonnais win on 2026-05-03?', 'slug': 'fl1-lyo-ren-2026-05-03-lyo', 'icon': 'https://polymarket-upload.s3.us-east-2.amazonaws.com/league-fl1.png', 'eventSlug': 'fl1-lyo-ren-2026-05-03', 'outcome': 'Yes', 'name': 'swisstony', 'pseudonym': 'Frail-Possible', 'bio': 'loincloth chic', 'profileImage': '', 'profileImageOptimized': '', 'source_wallet': '0x204f72f35326db932158cba6adff0b9a1da95e14'}
+   Market     : None
+   Side      : BUY
+   Outcome   : Yes
+   Price     : $0.4200
+   Target    : $22.68
+   Our Size  : $2.50 (budget $2.5)
+
+2026-04-27 08:35:46,588 [INFO] HTTP Request: GET https://clob.polymarket.com/tick-size?token_id=59969638069218018650005179728509872524175180771226153663836633123367082108511 "HTTP/2 200 OK"
+2026-04-27 08:35:46,727 [INFO] HTTP Request: GET https://clob.polymarket.com/neg-risk?token_id=59969638069218018650005179728509872524175180771226153663836633123367082108511 "HTTP/2 200 OK"
+2026-04-27 08:35:46,869 [INFO] HTTP Request: GET https://clob.polymarket.com/fee-rate?token_id=59969638069218018650005179728509872524175180771226153663836633123367082108511 "HTTP/2 200 OK"
+2026-04-27 08:35:47,053 [INFO] HTTP Request: POST https://clob.polymarket.com/order "HTTP/2 400 Bad Request"
+2026-04-27 08:35:47,056 [ERROR] Order placement failed: PolyApiException[status_code=400, error_message={'error': 'order 0x548efa9f1906d0f0dee06e1fde274ea8e5ca336eafec1c4545da71cb0ea4c872 is invalid. Size (2.5) lower than the minimum: 5'}]
+2026-04-27 08:35:47,595 [WARNING] Telegram response: 404
+2026-04-27 08:35:47,596 [WARNING] Telegram response: 404
+2026-04-27 08:36:20,143 [INFO] ============================================================
+2026-04-27 08:36:20,143 [INFO] Polymarket Copy Bot starting up
+2026-04-27 08:36:20,143 [INFO]   Targets : 0x204f...5e14, 0x161e...6ef0
+2026-04-27 08:36:20,143 [INFO]   Total Budget: $10 (split across 2 traders)
+2026-04-27 08:36:20,143 [INFO]   Per Trader: $5
+2026-04-27 08:36:20,143 [INFO]   Poll    : every 1s
+2026-04-27 08:36:20,143 [INFO]   DRY RUN : False
+2026-04-27 08:36:20,143 [INFO]   Open Positions: 2
+2026-04-27 08:36:20,143 [INFO] ============================================================
+2026-04-27 08:36:20,144 [INFO] Fetching existing trades to avoid replaying history...
+2026-04-27 08:36:20,933 [INFO]   Seeded 40 known trade IDs.
+2026-04-27 08:36:21,400 [WARNING] Telegram response: 404
+2026-04-27 08:36:28,740 [INFO] [0x204f...5e14] New trade detected!
+   Trade ID   : {'proxyWallet': '0x204f72f35326db932158cba6adff0b9a1da95e14', 'timestamp': 1777268174, 'conditionId': '0x778534c97fb3c9a1df75d612199ec47ec2a5ce121628a57c96bccd5f97cd9499', 'type': 'TRADE', 'size': 62, 'usdcSize': 34.72, 'transactionHash': '0x46964a944135a2f0b80a0f44e229c8ca514b7f695213a25bedeee022fc421741', 'price': 0.56, 'asset': '101044657369908479882472603119137418200041038140965048208114526554395061540887', 'side': 'BUY', 'outcomeIndex': 1, 'title': 'Will Olympique Lyonnais win on 2026-05-03?', 'slug': 'fl1-lyo-ren-2026-05-03-lyo', 'icon': 'https://polymarket-upload.s3.us-east-2.amazonaws.com/league-fl1.png', 'eventSlug': 'fl1-lyo-ren-2026-05-03', 'outcome': 'No', 'name': 'swisstony', 'pseudonym': 'Frail-Possible', 'bio': 'loincloth chic', 'profileImage': '', 'profileImageOptimized': '', 'source_wallet': '0x204f72f35326db932158cba6adff0b9a1da95e14'}
+   Market     : None
+   Side      : BUY
+   Outcome   : No
+   Price     : $0.5600
+   Target    : $34.72
+   Our Size  : $5.00 (budget $5)
+
+2026-04-27 08:36:32,463 [INFO] HTTP Request: GET https://clob.polymarket.com/tick-size?token_id=101044657369908479882472603119137418200041038140965048208114526554395061540887 "HTTP/2 200 OK"
+2026-04-27 08:36:32,644 [INFO] HTTP Request: GET https://clob.polymarket.com/neg-risk?token_id=101044657369908479882472603119137418200041038140965048208114526554395061540887 "HTTP/2 200 OK"
+2026-04-27 08:36:32,870 [INFO] HTTP Request: GET https://clob.polymarket.com/fee-rate?token_id=101044657369908479882472603119137418200041038140965048208114526554395061540887 "HTTP/2 200 OK"
+2026-04-27 08:36:33,074 [INFO] HTTP Request: POST https://clob.polymarket.com/order "HTTP/2 200 OK"
+2026-04-27 08:36:33,083 [INFO] Order posted: {'errorMsg': '', 'orderID': '0x96f1045098426a4f5267ba4c43d670f5541497552aadb24e90a2d9ab1f5b2ea7', 'takingAmount': '', 'makingAmount': '', 'status': 'live', 'success': True}
+2026-04-27 08:36:33,090 [INFO] [0x204f...5e14] New trade detected!
+   Trade ID   : {'proxyWallet': '0x204f72f35326db932158cba6adff0b9a1da95e14', 'timestamp': 1777268166, 'conditionId': '0x778534c97fb3c9a1df75d612199ec47ec2a5ce121628a57c96bccd5f97cd9499', 'type': 'TRADE', 'size': 34, 'usdcSize': 19.04, 'transactionHash': '0xb24fa4a4e8970ad612be765ec22fafb69bc993a02d0a3862267c7c1f745921f6', 'price': 0.56, 'asset': '101044657369908479882472603119137418200041038140965048208114526554395061540887', 'side': 'BUY', 'outcomeIndex': 1, 'title': 'Will Olympique Lyonnais win on 2026-05-03?', 'slug': 'fl1-lyo-ren-2026-05-03-lyo', 'icon': 'https://polymarket-upload.s3.us-east-2.amazonaws.com/league-fl1.png', 'eventSlug': 'fl1-lyo-ren-2026-05-03', 'outcome': 'No', 'name': 'swisstony', 'pseudonym': 'Frail-Possible', 'bio': 'loincloth chic', 'profileImage': '', 'profileImageOptimized': '', 'source_wallet': '0x204f72f35326db932158cba6adff0b9a1da95e14'}
+   Market     : None
+   Side      : BUY
+   Outcome   : No
+   Price     : $0.5600
+   Target    : $19.04
+   Our Size  : $5.00 (budget $5)
+
+2026-04-27 08:36:33,283 [INFO] HTTP Request: GET https://clob.polymarket.com/tick-size?token_id=101044657369908479882472603119137418200041038140965048208114526554395061540887 "HTTP/2 200 OK"
+2026-04-27 08:36:33,457 [INFO] HTTP Request: GET https://clob.polymarket.com/neg-risk?token_id=101044657369908479882472603119137418200041038140965048208114526554395061540887 "HTTP/2 200 OK"
+2026-04-27 08:36:33,590 [INFO] HTTP Request: GET https://clob.polymarket.com/fee-rate?token_id=101044657369908479882472603119137418200041038140965048208114526554395061540887 "HTTP/2 200 OK"
+2026-04-27 08:36:33,834 [INFO] HTTP Request: POST https://clob.polymarket.com/order "HTTP/2 200 OK"
+2026-04-27 08:36:33,887 [INFO] Order posted: {'errorMsg': '', 'orderID': '0x845e7ce18acf5d6bcc2ba3bad98744a4dc5a47c68b3d9d6a38dd6d36252f094e', 'takingAmount': '', 'makingAmount': '', 'status': 'live', 'success': True}
+2026-04-27 08:36:34,507 [WARNING] Telegram response: 404
+2026-04-27 08:36:34,508 [WARNING] Telegram response: 404
+2026-04-27 08:38:59,423 [INFO] ============================================================
+2026-04-27 08:38:59,423 [INFO] Polymarket Copy Bot starting up
+2026-04-27 08:38:59,423 [INFO]   Targets : 0x204f...5e14, 0x161e...6ef0
+2026-04-27 08:38:59,423 [INFO]   Total Budget: $10 (split across 2 traders)
+2026-04-27 08:38:59,423 [INFO]   Per Trader: $5
+2026-04-27 08:38:59,423 [INFO]   Poll    : every 1s
+2026-04-27 08:38:59,423 [INFO]   DRY RUN : False
+2026-04-27 08:38:59,424 [INFO]   Open Positions: 3
+2026-04-27 08:38:59,424 [INFO] ============================================================
+2026-04-27 08:38:59,424 [INFO] Fetching existing trades to avoid replaying history...
+2026-04-27 08:39:00,052 [INFO]   Seeded 40 known trade IDs.
+2026-04-27 08:39:00,508 [WARNING] Telegram response: 404
+2026-04-27 08:39:52,500 [INFO] ============================================================
+2026-04-27 08:39:52,500 [INFO] Polymarket Copy Bot starting up
+2026-04-27 08:39:52,501 [INFO]   Targets : 0x204f...5e14, 0x161e...6ef0
+2026-04-27 08:39:52,501 [INFO]   Total Budget: $10 (split across 2 traders)
+2026-04-27 08:39:52,501 [INFO]   Per Trader: $5
+2026-04-27 08:39:52,501 [INFO]   Poll    : every 1s
+2026-04-27 08:39:52,501 [INFO]   DRY RUN : False
+2026-04-27 08:39:52,501 [INFO]   Open Positions: 3
+2026-04-27 08:39:52,501 [INFO] ============================================================
+2026-04-27 08:39:52,501 [INFO] Fetching existing trades to avoid replaying history...
+2026-04-27 08:39:53,163 [INFO]   Seeded 40 known trade IDs.
+2026-04-27 08:39:53,629 [WARNING] Telegram response: 404
+2026-04-27 08:40:19,597 [INFO] [0x204f...5e14] New trade detected!
+   Trade ID   : {'proxyWallet': '0x204f72f35326db932158cba6adff0b9a1da95e14', 'timestamp': 1777268394, 'conditionId': '0x61e6ebd11a3cb2a1bd3ae04ce5cc891a99a2f57180a10d4593db29e15ea3f012', 'type': 'TRADE', 'size': 52.666664, 'usdcSize': 13.166666, 'transactionHash': '0x28089ac7abd28560d4ba8243f5331d8b1a7350c4230771324220861355a06976', 'price': 0.25, 'asset': '14747984392314190617586017441888044338713566459545039925235578898210900867120', 'side': 'BUY', 'outcomeIndex': 0, 'title': 'RCD Espanyol de Barcelona vs. Levante UD: O/U 3.5', 'slug': 'lal-esp-lev-2026-04-27-total-3pt5', 'icon': 'https://polymarket-upload.s3.us-east-2.amazonaws.com/league-lal.png', 'eventSlug': 'lal-esp-lev-2026-04-27-more-markets', 'outcome': 'Over', 'name': 'swisstony', 'pseudonym': 'Frail-Possible', 'bio': 'loincloth chic', 'profileImage': '', 'profileImageOptimized': '', 'source_wallet': '0x204f72f35326db932158cba6adff0b9a1da95e14'}
+   Market     : None
+   Side      : BUY
+   Outcome   : Over
+   Price     : $0.2500
+   Target    : $13.17
+   Our Size  : $5.00 (budget $5)
+
+2026-04-27 08:40:39,146 [INFO] ============================================================
+2026-04-27 08:40:39,146 [INFO] Polymarket Copy Bot starting up
+2026-04-27 08:40:39,146 [INFO]   Targets : 0x204f...5e14, 0x161e...6ef0
+2026-04-27 08:40:39,146 [INFO]   Total Budget: $10 (split across 2 traders)
+2026-04-27 08:40:39,146 [INFO]   Per Trader: $5
+2026-04-27 08:40:39,146 [INFO]   Poll    : every 1s
+2026-04-27 08:40:39,146 [INFO]   DRY RUN : False
+2026-04-27 08:40:39,146 [INFO]   Open Positions: 3
+2026-04-27 08:40:39,146 [INFO] ============================================================
+2026-04-27 08:40:39,147 [INFO] Fetching existing trades to avoid replaying history...
+2026-04-27 08:40:39,848 [INFO]   Seeded 40 known trade IDs.
+2026-04-27 08:40:40,545 [INFO] Telegram signal sent!
+2026-04-27 08:41:14,010 [INFO] ============================================================
+2026-04-27 08:41:14,010 [INFO] Polymarket Copy Bot starting up
+2026-04-27 08:41:14,011 [INFO]   Targets : 0x204f...5e14, 0x161e...6ef0
+2026-04-27 08:41:14,011 [INFO]   Total Budget: $10 (split across 2 traders)
+2026-04-27 08:41:14,011 [INFO]   Per Trader: $5
+2026-04-27 08:41:14,011 [INFO]   Poll    : every 1s
+2026-04-27 08:41:14,011 [INFO]   DRY RUN : False
+2026-04-27 08:41:14,011 [INFO]   Open Positions: 3
+2026-04-27 08:41:14,011 [INFO] ============================================================
+2026-04-27 08:41:14,011 [INFO] Fetching existing trades to avoid replaying history...
+2026-04-27 08:41:14,677 [INFO]   Seeded 40 known trade IDs.
+2026-04-27 08:41:15,506 [INFO] Telegram signal sent!
+2026-04-27 08:42:04,793 [INFO] ============================================================
+2026-04-27 08:42:04,794 [INFO] Polymarket Copy Bot starting up
+2026-04-27 08:42:04,794 [INFO]   Targets : 0x204f...5e14, 0x161e...6ef0
+2026-04-27 08:42:04,794 [INFO]   Total Budget: $10 (split across 2 traders)
+2026-04-27 08:42:04,794 [INFO]   Per Trader: $5
+2026-04-27 08:42:04,794 [INFO]   Poll    : every 1s
+2026-04-27 08:42:04,794 [INFO]   DRY RUN : False
+2026-04-27 08:42:04,794 [INFO]   Open Positions: 3
+2026-04-27 08:42:04,794 [INFO] ============================================================
+2026-04-27 08:42:04,794 [INFO] Fetching existing trades to avoid replaying history...
+2026-04-27 08:42:05,375 [INFO]   Seeded 40 known trade IDs.
+2026-04-27 08:42:05,846 [INFO] Telegram signal sent!
